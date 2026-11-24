@@ -1,39 +1,50 @@
 #!/usr/bin/env python3
-"""Ship the finished poster.
+"""Ship the rendered poster into /output.
 
-Takes the ``entry.png`` rendered beside this script and places an
-identical copy at ``/output/entry.png``. Standard library only, so it
-runs anywhere Python 3 does.
+Finds entry.png next to this file, copies it to /output/entry.png, and
+checks the copy landed at the same size before reporting success.
 """
 
+import hashlib
 import os
 import shutil
 import sys
 
-POSTER_NAME = "entry.png"
-DEST_DIR = "/output"
+
+def _digest(path):
+    """SHA-256 of a file, read in 1 MiB chunks."""
+    hasher = hashlib.sha256()
+    with open(path, "rb") as handle:
+        for chunk in iter(lambda: handle.read(1 << 20), b""):
+            hasher.update(chunk)
+    return hasher.hexdigest()
 
 
-def ship_poster():
-    """Copy the poster to the output folder and confirm the copy matches."""
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    source = os.path.join(script_dir, POSTER_NAME)
+def main():
+    here = os.path.dirname(os.path.abspath(__file__))
+    source = os.path.join(here, "entry.png")
     if not os.path.isfile(source):
         print("missing poster: %s (run draw.py first)" % source,
               file=sys.stderr)
         return 1
-    os.makedirs(DEST_DIR, exist_ok=True)
-    destination = os.path.join(DEST_DIR, POSTER_NAME)
-    shutil.copyfile(source, destination)
+    out_dir = "/output"
+    os.makedirs(out_dir, exist_ok=True)
+    target = os.path.join(out_dir, "entry.png")
+    shutil.copyfile(source, target)
     src_bytes = os.path.getsize(source)
-    dst_bytes = os.path.getsize(destination)
+    dst_bytes = os.path.getsize(target)
     if src_bytes != dst_bytes:
-        print("copy mismatch: %d bytes in, %d bytes out"
-              % (src_bytes, dst_bytes), file=sys.stderr)
+        print("size mismatch after copy: %d vs %d" % (src_bytes, dst_bytes),
+              file=sys.stderr)
         return 1
-    print("shipped %s -> %s (%d bytes)" % (source, destination, dst_bytes))
+    if _digest(source) != _digest(target):
+        print("hash mismatch after copy: %s != %s" % (source, target),
+              file=sys.stderr)
+        return 1
+    print("shipped %s -> %s (%d bytes, sha256 %s)"
+          % (source, target, dst_bytes, _digest(target)))
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(ship_poster())
+    raise SystemExit(main())
