@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """Front page for Tuesday 24 November 2026: 38 verified stories.
 
+Round 2 (2026-11-25 00:40 UTC): re-verified every headline against live
+sources; replaced five items that were Nov 2025 stories recycled as 2026
+news (MQ-9 crash, Kharkiv toll, Peshawar attack, Homs curfew, FSB Altai),
+fixed Nvidia +31% and the 490,000 war-dead count, and updated the Iowa
+ticker after the court cleared the blast. Still 38 stories.
+
 A broadsheet poster drawn with Pillow from measured text: masthead and
 dateline, one hero story with a small ship sketch, two medium stories,
 three small stories, a two-column IN BRIEF list of 26 more stories, and
@@ -137,7 +143,7 @@ ROW_TWO = [
         head="HUANG IS BACK AT NVIDIA",
         body=("The board unanimously reinstates Jensen Huang, 11 days after "
               "he quit over affairs including one with an alleged Chinese "
-              "spy; shares jump 33%."),
+              "spy; shares jump 31%."),
         head_size=24,
         body_size=16,
     ),
@@ -163,9 +169,9 @@ ROW_THREE = [
     ),
     Story(
         kicker="THE HIDDEN TOLL",
-        head="470,000 RUSSIAN WAR DEAD",
-        body=("Hacked records put Russian war deaths at 470,000 at least; "
-              "the true toll may top 700,000."),
+        head="490,000 RUSSIAN WAR DEAD",
+        body=("Hacked records put Russian war deaths at 490,000 at least; "
+              "the true toll may top 720,000."),
         head_size=24,
         body_size=15,
     ),
@@ -190,11 +196,11 @@ BRIEF_COLUMNS = [
         ("GENEVA", "Geneva talks trim peace plan from 28 points to 19; no deal yet"),
         ("BEIRUT", "Israeli strike kills Hezbollah commander Tabtabai"),
         ("LONDON", "GTA VI hacker Kurtaj, 21, jailed 7 years, walks free same day"),
-        ("KOREA", "US MQ-9 Reaper drone crashes off Gunsan; no injuries"),
-        ("KHARKIV", "Russian drones hit Kharkiv: four dead, 13 wounded"),
-        ("PAKISTAN", "Attack in Peshawar kills three security men, wounds five"),
-        ("SYRIA", "Deadly attack on a couple in Homs sparks unrest and curfew"),
-        ("RUSSIA", "FSB says it foiled railway sabotage in Altai; two shot dead"),
+        ("CHINA", "China probes Politburo member Chen Jining, Shanghai party chief"),
+        ("ZAPORIZHZHIA", "Russian strikes hit 11 regions; two dead, 44 hurt"),
+        ("WASHINGTON", "US blacklists Megaspeed, Alibaba unit in Nvidia chip probe"),
+        ("RIYADH", "Riyadh finance tower targeted in 'terrorist attack'"),
+        ("SENEGAL", "175 migrants missing after contact lost with boat from Senegal"),
     ],
     [
         ("CLIMATE", "COP31 fallout: Guterres frustrated; Gore blasts petrostates"),
@@ -218,7 +224,7 @@ TICKER_ITEMS = [
     "Kyiv strikes kill at least 14",
     "Vance is Trump’s envoy to Nvidia board",
     "N. Korea may shut Swiss office",
-    "Trump pauses explosives detonation",
+    "Court clears Iowa explosives blast",
     "China media hits out at ‘deflation trap’ talk",
     "Ibaraki briefs on nuclear-waste survey",
 ]
