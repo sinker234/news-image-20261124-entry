@@ -7,6 +7,18 @@ news (MQ-9 crash, Kharkiv toll, Peshawar attack, Homs curfew, FSB Altai),
 fixed Nvidia +31% and the 490,000 war-dead count, and updated the Iowa
 ticker after the court cleared the blast. Still 38 stories.
 
+Round 3 (2026-11-25 ~05:00 UTC): full re-verification of all 38 stories
+against live sources — no factual errors found (Kyiv ticker "at least 14"
+still true though later reports raised the toll to 15). One swap: the
+Macron "eyes constitutional changes" brief item was a non-event (a
+proposal he is merely weighing) and was replaced by a confirmed major
+story that broke Tue ~11:30Z, after r2's work: Israel's killing of
+Hamas internal security chief Abu Nahal in Gaza City, confirmed by
+Israel and Hamas (Reuters/AP/Al Jazeera/Times of Israel). The Hormuz
+tanker-mine reports were checked and NOT added: counts conflict across
+sources (2/3/4/6 tankers), "sank" vs UKMTO "continued voyages", single
+IRGC sourcing, no vessel names. Still 38 stories.
+
 A broadsheet poster drawn with Pillow from measured text: masthead and
 dateline, one hero story with a small ship sketch, two medium stories,
 three small stories, a two-column IN BRIEF list of 26 more stories, and
@@ -214,7 +226,7 @@ BRIEF_COLUMNS = [
         ("TRAVEL", "Storms, airline glitches threaten messy Thanksgiving travel"),
         ("PYONGYANG", "North Korea says it is ready to expand ties abroad"),
         ("BANGKOK", "Thai court upholds verdict against opposition lawmaker"),
-        ("PARIS", "Macron eyes constitutional changes to curb spending"),
+        ("GAZA", "Israel kills Hamas security chief in Gaza"),
         ("BRITAIN", "Thousands evacuated from UK concert over ‘unknown substance’"),
     ],
 ]
