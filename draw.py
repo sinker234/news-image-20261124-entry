@@ -209,7 +209,7 @@ BRIEF_COLUMNS = [
         ("BEIRUT", "Israeli strike kills Hezbollah commander Tabtabai"),
         ("LONDON", "GTA VI hacker Kurtaj, 21, jailed 7 years, walks free same day"),
         ("CHINA", "China probes Politburo member Chen Jining, Shanghai party chief"),
-        ("ZAPORIZHZHIA", "Russian strikes hit 11 regions; two dead, 44 hurt"),
+        ("ZAPORIZHZHIA", "Russian strikes hit 11 regions; two dead, 48 hurt"),
         ("WASHINGTON", "US blacklists Megaspeed, Alibaba unit in Nvidia chip probe"),
         ("RIYADH", "Riyadh finance tower targeted in 'terrorist attack'"),
         ("SENEGAL", "175 migrants missing after contact lost with boat from Senegal"),
