@@ -233,7 +233,7 @@ BRIEF_COLUMNS = [
 
 # Six ticker items; rendered as two centred lines of three.
 TICKER_ITEMS = [
-    "Kyiv strikes kill at least 14",
+    "Kyiv strikes kill at least 15",
     "Vance is Trump’s envoy to Nvidia board",
     "N. Korea may shut Swiss office",
     "Court clears Iowa explosives blast",
