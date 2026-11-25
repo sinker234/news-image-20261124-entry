@@ -204,7 +204,7 @@ BRIEF_COLUMNS = [
         ("CONGRESS", "Gomez to quit Congress Dec 1 after ethics misconduct finding"),
         ("UN", "Guterres: agree a global AI risk framework within a year"),
         ("ISRAEL", "Eisenkot sees no imminent Iran threat; unity talks continue"),
-        ("INDONESIA", "Candy factory fire: 24 dead, about 30 still missing"),
+        ("INDONESIA", "Candy factory fire: 26 dead, 28 still missing"),
         ("GENEVA", "Geneva talks trim peace plan from 28 points to 19; no deal yet"),
         ("BEIRUT", "Israeli strike kills Hezbollah commander Tabtabai"),
         ("LONDON", "GTA VI hacker Kurtaj, 21, jailed 7 years, walks free same day"),
@@ -233,7 +233,7 @@ BRIEF_COLUMNS = [
 
 # Six ticker items; rendered as two centred lines of three.
 TICKER_ITEMS = [
-    "Kyiv strikes kill at least 15",
+    "Kyiv strikes kill at least 16",
     "Vance is Trump’s envoy to Nvidia board",
     "N. Korea may shut Swiss office",
     "Court clears Iowa explosives blast",
